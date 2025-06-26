@@ -19,11 +19,18 @@
     gap: 10px;
     select{
       padding: 0.5rem 1rem;
-      outline: none
-      
+      outline: none;
+      background-color: transparent;
+      color: $text-color;
+    }
+    option{
+      color: black;
     }
     button{
       @include btn-style();
+      @include mobile{
+      @include btn-style($main-color, $font-medium);
+    }
     }
   }
 }

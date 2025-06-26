@@ -5,6 +5,10 @@
   }
   button{
     @include btn-style($main-color, $font-medium);
+    @include mobile{
+      @include btn-style($main-color, 2rem);
+      padding: 0.8rem 1rem;
+    }
   }
   div{
     @include flex-layout(row,space-between,stretch);
@@ -36,6 +40,9 @@
       font-size: 1.3rem;
       color: #666;
       top: 10px;
+      @include mobile{
+        top: 12px;
+      }
       left: 15px;
     }
     span.focused{
